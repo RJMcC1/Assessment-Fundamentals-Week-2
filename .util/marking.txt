@@ -7,24 +7,12 @@ Level-1/test_one_task.py .........                                       [ 37%]
 Level-2/test_two_task.py .......                                         [ 66%]
 Level-3/test_three_task.py ........                                      [100%]
 
-============================== 24 passed in 0.03s ==============================
+============================== 24 passed in 0.04s ==============================
 ************* Module task_one
-Level-1/task_one.py:5:58: C0303: Trailing whitespace (trailing-whitespace)
-Level-1/task_one.py:12:0: C0303: Trailing whitespace (trailing-whitespace)
-Level-1/task_one.py:15:0: C0303: Trailing whitespace (trailing-whitespace)
-Level-1/task_one.py:16:43: C0303: Trailing whitespace (trailing-whitespace)
-Level-1/task_one.py:20:0: C0303: Trailing whitespace (trailing-whitespace)
-Level-1/task_one.py:29:0: C0303: Trailing whitespace (trailing-whitespace)
-Level-1/task_one.py:34:0: C0303: Trailing whitespace (trailing-whitespace)
 Level-1/task_one.py:1:0: C0114: Missing module docstring (missing-module-docstring)
-Level-1/task_one.py:4:0: C0115: Missing class docstring (missing-class-docstring)
 Level-1/task_one.py:5:34: W0622: Redefining built-in 'type' (redefined-builtin)
-Level-1/task_one.py:4:0: R0903: Too few public methods (0/2) (too-few-public-methods)
-Level-1/task_one.py:23:0: C0115: Missing class docstring (missing-class-docstring)
+Level-1/task_one.py:3:0: R0903: Too few public methods (0/2) (too-few-public-methods)
 Level-1/task_one.py:28:27: R1734: Consider using [] instead of list() (use-list-literal)
-Level-1/task_one.py:31:4: C0116: Missing function or method docstring (missing-function-docstring)
-Level-1/task_one.py:35:4: C0116: Missing function or method docstring (missing-function-docstring)
-Level-1/task_one.py:38:4: C0116: Missing function or method docstring (missing-function-docstring)
 ************* Module task_two
 Level-2/task_two.py:10:58: C0303: Trailing whitespace (trailing-whitespace)
 Level-2/task_two.py:17:0: C0303: Trailing whitespace (trailing-whitespace)
@@ -75,5 +63,5 @@ Level-3/task_three.py:92:23: W0621: Redefining name 'quiz' from outer scope (lin
 Level-3/task_three.py:105:4: R1710: Either all return statements in a function should return an expression, or none of them should. (inconsistent-return-statements)
 
 ------------------------------------------------------------------
-Your code has been rated at 6.22/10 (previous run: 6.22/10, +0.00)
+Your code has been rated at 6.86/10 (previous run: 6.86/10, +0.00)
 
