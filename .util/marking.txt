@@ -1,10 +1,10 @@
 ============================= test session starts ==============================
 platform linux -- Python 3.14.4, pytest-9.0.3, pluggy-1.6.0
 rootdir: /home/runner/work/Assessment-Fundamentals-Week-2/Assessment-Fundamentals-Week-2
-collected 9 items / 2 errors
+collected 16 items / 1 error
 
-!!!!!!!!!!!!!!!!!!! Interrupted: 2 errors during collection !!!!!!!!!!!!!!!!!!!!
-============================== 2 errors in 0.13s ===============================
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+=============================== 1 error in 0.12s ===============================
 ************* Module task_one
 Level-1/task_one.py:5:58: C0303: Trailing whitespace (trailing-whitespace)
 Level-1/task_one.py:12:0: C0303: Trailing whitespace (trailing-whitespace)
@@ -23,11 +23,35 @@ Level-1/task_one.py:31:4: C0116: Missing function or method docstring (missing-f
 Level-1/task_one.py:35:4: C0116: Missing function or method docstring (missing-function-docstring)
 Level-1/task_one.py:38:4: C0116: Missing function or method docstring (missing-function-docstring)
 ************* Module task_two
+Level-2/task_two.py:10:58: C0303: Trailing whitespace (trailing-whitespace)
+Level-2/task_two.py:17:0: C0303: Trailing whitespace (trailing-whitespace)
+Level-2/task_two.py:20:0: C0303: Trailing whitespace (trailing-whitespace)
+Level-2/task_two.py:21:43: C0303: Trailing whitespace (trailing-whitespace)
+Level-2/task_two.py:25:0: C0303: Trailing whitespace (trailing-whitespace)
+Level-2/task_two.py:28:0: C0303: Trailing whitespace (trailing-whitespace)
+Level-2/task_two.py:50:0: C0303: Trailing whitespace (trailing-whitespace)
+Level-2/task_two.py:55:0: C0303: Trailing whitespace (trailing-whitespace)
+Level-2/task_two.py:66:0: C0303: Trailing whitespace (trailing-whitespace)
 Level-2/task_two.py:1:0: C0114: Missing module docstring (missing-module-docstring)
-Level-2/task_two.py:19:14: E0602: Undefined variable 'Trainee' (undefined-variable)
-Level-2/task_two.py:22:27: E0602: Undefined variable 'MultipleChoiceAssessment' (undefined-variable)
-Level-2/task_two.py:24:27: E0602: Undefined variable 'TechnicalAssessment' (undefined-variable)
-Level-2/task_two.py:26:27: E0602: Undefined variable 'MultipleChoiceAssessment' (undefined-variable)
+Level-2/task_two.py:9:0: C0115: Missing class docstring (missing-class-docstring)
+Level-2/task_two.py:10:34: W0622: Redefining built-in 'type' (redefined-builtin)
+Level-2/task_two.py:26:4: C0116: Missing function or method docstring (missing-function-docstring)
+Level-2/task_two.py:27:28: E1101: Instance of 'Assessment' has no 'weighting' member (no-member)
+Level-2/task_two.py:9:0: R0903: Too few public methods (1/2) (too-few-public-methods)
+Level-2/task_two.py:29:0: C0115: Missing class docstring (missing-class-docstring)
+Level-2/task_two.py:29:0: R0903: Too few public methods (1/2) (too-few-public-methods)
+Level-2/task_two.py:34:0: C0115: Missing class docstring (missing-class-docstring)
+Level-2/task_two.py:34:0: R0903: Too few public methods (1/2) (too-few-public-methods)
+Level-2/task_two.py:39:0: C0115: Missing class docstring (missing-class-docstring)
+Level-2/task_two.py:39:0: R0903: Too few public methods (1/2) (too-few-public-methods)
+Level-2/task_two.py:44:0: C0115: Missing class docstring (missing-class-docstring)
+Level-2/task_two.py:49:27: R1734: Consider using [] instead of list() (use-list-literal)
+Level-2/task_two.py:52:4: C0116: Missing function or method docstring (missing-function-docstring)
+Level-2/task_two.py:56:4: C0116: Missing function or method docstring (missing-function-docstring)
+Level-2/task_two.py:61:4: C0116: Missing function or method docstring (missing-function-docstring)
+Level-2/task_two.py:67:4: C0116: Missing function or method docstring (missing-function-docstring)
+Level-2/task_two.py:67:37: W0622: Redefining built-in 'type' (redefined-builtin)
+Level-2/task_two.py:68:27: R1734: Consider using [] instead of list() (use-list-literal)
 ************* Module task_three
 Level-3/task_three.py:1:0: C0114: Missing module docstring (missing-module-docstring)
 Level-3/task_three.py:17:0: C0115: Missing class docstring (missing-class-docstring)
@@ -41,5 +65,5 @@ Level-3/task_three.py:35:23: W0621: Redefining name 'quiz' from outer scope (lin
 Level-3/task_three.py:33:0: R0903: Too few public methods (0/2) (too-few-public-methods)
 
 ------------------------------------------------------------------
-Your code has been rated at 2.99/10 (previous run: 2.99/10, +0.00)
+Your code has been rated at 5.00/10 (previous run: 5.00/10, +0.00)
 
