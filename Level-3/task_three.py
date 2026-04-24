@@ -2,6 +2,7 @@ from datetime import date
 
 
 class Assessment:
+    '''Assessment parent class, validates types, claculates weight'''
     def __init__(self, name:str , type:str , score:float):
         self.name = name
         self.type = type
@@ -15,24 +16,29 @@ class Assessment:
                 if self.type != "presentation":
                     raise ValueError("invalid type")
     def calculate_score(self):
+        '''Calculates weighting in relation to score'''
         return self.score * self.weighting
 
 class MultipleChoiceAssessment(Assessment):
+    '''Multichoice, difference in weighting'''
     def __init__(self, name, score):
         super().__init__(name, "multiple-choice", score)
         self.weighting = 0.70
 
 class TechnicalAssessment(Assessment):
+    '''Technical ,difference in weighting'''
     def __init__(self, name, score):
         super().__init__(name, "technical", score)
         self.weighting = 1.0
 
 class PresentationAssessment(Assessment):
+    '''Presentation, difference in weighting'''
     def __init__(self, name,  score ):
         super().__init__(name, "presentation", score)
         self.weighting = 0.6
 
 class Trainee:
+    '''Trainee class, contains methods get_age, and variations of get_assessment'''
     def __init__(self, name:str , email:str , date_of_birth:date):
         self.name = name
         self.email = email
@@ -45,11 +51,13 @@ class Trainee:
         return age.days // 365
 
     def add_assessment(self, assessment: Assessment) -> None:
+        '''Checks if assessment is list and adds to empty list'''
         if not isinstance(assessment, Assessment):
             raise TypeError("Not a subclass")
         self.assessments.append(assessment)
 
     def get_assessment(self ,name: str) -> Assessment | None:
+        '''Looks for name of assessments and return them if there'''
         for assessment in self.assessments:
             if assessment.name == name:
                 return assessment
@@ -64,7 +72,7 @@ class Trainee:
 
 
 class Question:
-
+    '''Class of Question'''
     def __init__(self, question: str, chosen_answer: str, correct_answer: str):
         self.question = question
         self.chosen_answer = chosen_answer
@@ -72,7 +80,7 @@ class Question:
 
 
 class Quiz:
-
+    '''Class of quiz, made up of a list of questions'''
     def __init__(self, questions: list, name: str, type: str):
         self.questions = questions
         self.name = name
@@ -80,11 +88,12 @@ class Quiz:
 
 
 class Marking:
-
+    '''For marking quizes'''
     def __init__(self, quiz: Quiz) -> None:
         self._quiz = quiz
 
     def mark(self) -> int:
+        '''Counts correct answers then gets the percentage obtained'''
         total_score = 0
         for question in self._quiz.questions:
             if question.chosen_answer == question.correct_answer:
@@ -94,6 +103,7 @@ class Marking:
         return round((total_score / len(self._quiz.questions)) * 100)
 
     def generate_assessment(self) -> Assessment:
+        '''Assigns appropriate Class to quiz'''
         if self._quiz.type == "technical":
             return TechnicalAssessment(self._quiz.name, self.mark())
         if self._quiz.type == "multiple-choice":
