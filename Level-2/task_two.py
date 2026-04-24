@@ -6,6 +6,70 @@ from datetime import date
 # COPY YOUR CODE FROM LEVEL 1 BELOW
 #
 #####
+class Assessment:
+    def __init__(self, name:str , type:str , score:float):        
+        self.name = name
+        self.type = type
+        self.score = score
+
+        if self.score > 100:
+            raise ValueError("Can't be higher then 100")
+        
+        if self.score < 0:
+            raise ValueError("Can't be lower then 0")
+        
+        if self.type != "multiple-choice" : 
+            if self.type !="technical" :
+                if self.type != "presentation":
+                    raise ValueError("invalid type")
+                
+    def calculate_score(self):
+        return self.score * self.weighting
+        
+class MultipleChoiceAssessment(Assessment):
+    def __init__(self, name, score):
+        super().__init__(name, "multiple-choice", score)
+        self.weighting = 0.70
+
+class TechnicalAssessment(Assessment):
+    def __init__(self, name, score):
+        super().__init__(name, "technical", score)
+        self.weighting = 1.0
+
+class PresentationAssessment(Assessment):
+    def __init__(self, name,  score ):
+        super().__init__(name, "presentation", score)
+        self.weighting = 0.6
+
+class Trainee:
+    def __init__(self, name:str , email:str , date_of_birth:date):
+        self.name = name
+        self.email = email
+        self.date_of_birth = date_of_birth
+        self.assessments = list()
+        
+
+    def get_age(self):
+        age = date.today() - self.date_of_birth
+        return age.days // 365
+    
+    def add_assessment(self, assessment: Assessment) -> None:
+        if not isinstance(assessment, Assessment):
+            raise TypeError("Not a subclass")
+        self.assessments.append(assessment)
+
+    def get_assessment(self ,name: str) -> Assessment | None:
+        for assessment in self.assessments:
+            if assessment.name == name:
+                return assessment
+            return None
+        
+    def get_assessment_of_type(self, type: str) -> list[Assessment]:
+        list_assessments = list()
+        for assessment in self.assessments:
+            if assessment.type == type:
+                list_assessments.append(assessment)
+        return list_assessments
 
 
 #####
